@@ -1,0 +1,24 @@
+{
+  "name": "funding-patterns",
+  "fields": [
+    {"name": "id", "type": "Edm.String", "key": true, "filterable": true},
+    {"name": "company_name", "type": "Edm.String", "searchable": true},
+    {"name": "industry", "type": "Edm.String", "filterable": true, "searchable": true},
+    {"name": "geography", "type": "Edm.String", "filterable": true, "searchable": true},
+    {"name": "founded_year", "type": "Edm.Int32", "filterable": true},
+    {"name": "funding_rounds", "type": "Edm.Int32", "filterable": true},
+    {"name": "total_raised_usd", "type": "Edm.Double", "filterable": true},
+    {"name": "burn_rate_monthly", "type": "Edm.String", "searchable": true},
+    {"name": "runway_months", "type": "Edm.Int32", "filterable": true},
+    {"name": "outcome", "type": "Edm.String", "filterable": true, "searchable": true},
+    {"name": "b2b_or_b2c", "type": "Edm.String", "filterable": true},
+    {"name": "revenue_model", "type": "Edm.String", "searchable": true},
+    {"name": "months_to_first_revenue", "type": "Edm.Int32", "filterable": true},
+    {"name": "content", "type": "Edm.String", "searchable": true},
+    {"name": "embedding", "type": "Collection(Edm.Single)", "searchable": true, "dimensions": 768, "vectorSearchProfile": "default-profile"}
+  ],
+  "vectorSearch": {
+    "algorithms": [{"name": "default-algo", "kind": "hnsw"}],
+    "profiles": [{"name": "default-profile", "algorithm": "default-algo"}]
+  }
+}
